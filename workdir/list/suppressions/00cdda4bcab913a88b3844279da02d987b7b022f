@@ -1,0 +1,9 @@
+panic: capnp: address out of bounds
+zombiezen.com/go/capnproto2.List.primitiveElem
+zombiezen.com/go/capnproto2.PointerList.PtrAt
+zombiezen.com/go/capnproto2.(*Message).RootPtr
+github.com/Oncilla/go-capnproto2-fuzz.parse
+github.com/Oncilla/go-capnproto2-fuzz.Parse
+github.com/Oncilla/go-capnproto2-fuzz.Fuzz
+go-fuzz-dep.Main
+main.main

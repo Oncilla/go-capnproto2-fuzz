@@ -1,0 +1,24 @@
+panic: reflect.MakeSlice: negative len
+
+goroutine 1 [running]:
+reflect.MakeSlice(0x563460, 0x5072e0, 0xffffffffff000000, 0xffffffffff000000, 0x1, 0x3a, 0x0)
+	/usr/local/go/src/reflect/value.go:2195 +0x2e2
+zombiezen.com/go/capnproto2/pogs.(*extracter).extractList(0xc0000dbce8, 0x5072e0, 0xc00000e0a0, 0x197, 0xc0000b8180, 0x1800000338, 0x1, 0x3a, 0x0, 0xc0000b80f0, ...)
+	/home/roos/go/src/zombiezen.com/go/capnproto2/pogs/extract.go:261 +0x384
+zombiezen.com/go/capnproto2/pogs.(*extracter).extractField(0xc0000dbce8, 0x5072e0, 0xc00000e0a0, 0x197, 0xc0000b80f0, 0x8, 0x1, 0x3f, 0x0, 0xc0000b8180, ...)
+	/home/roos/go/src/zombiezen.com/go/capnproto2/pogs/extract.go:223 +0x293b
+zombiezen.com/go/capnproto2/pogs.(*extracter).extractStruct(0xc0000dbce8, 0x5172a0, 0xc00000e0a0, 0x199, 0xc61de4821b8a0505, 0xc0000b80f0, 0x8, 0x1, 0x3f, 0x0, ...)
+	/home/roos/go/src/zombiezen.com/go/capnproto2/pogs/extract.go:95 +0xfc2
+zombiezen.com/go/capnproto2/pogs.Extract(0x514040, 0xc00000e0a0, 0xc61de4821b8a0505, 0xc0000b80f0, 0x8, 0x1, 0x3f, 0x0, 0x20, 0x18)
+	/home/roos/go/src/zombiezen.com/go/capnproto2/pogs/extract.go:17 +0xd3
+github.com/Oncilla/go-capnproto2-fuzz.parse(0xc00000e0a0, 0x7f0f89a83000, 0x1c, 0x200000, 0x9, 0x4453c8)
+	/home/roos/go/src/github.com/Oncilla/go-capnproto2-fuzz/list.go:45 +0x361
+github.com/Oncilla/go-capnproto2-fuzz.Parse(0x7f0f89a83000, 0x1c, 0x200000, 0x5cbc4ff7, 0x18fc12cc, 0x4a235954598d)
+	/home/roos/go/src/github.com/Oncilla/go-capnproto2-fuzz/list.go:30 +0x7a
+github.com/Oncilla/go-capnproto2-fuzz.Fuzz(0x7f0f89a83000, 0x1c, 0x200000, 0x4)
+	/home/roos/go/src/github.com/Oncilla/go-capnproto2-fuzz/list.go:14 +0x5b
+go-fuzz-dep.Main(0xc0000dbf80, 0x1, 0x1)
+	/tmp/go-fuzz-build423503150/goroot/src/go-fuzz-dep/main.go:36 +0x1b6
+main.main()
+	/tmp/go-fuzz-build423503150/gopath/src/github.com/Oncilla/go-capnproto2-fuzz/go.fuzz.main/main.go:15 +0x52
+exit status 2

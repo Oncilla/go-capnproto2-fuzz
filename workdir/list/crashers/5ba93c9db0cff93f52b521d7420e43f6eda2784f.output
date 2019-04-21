@@ -1,0 +1,20 @@
+panic: capnp: address out of bounds
+
+goroutine 1 [running]:
+zombiezen.com/go/capnproto2.List.primitiveElem(0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x100000000, 0x0, 0xc0000dc0f0, 0x0)
+	/home/roos/go/src/zombiezen.com/go/capnproto2/list.go:204 +0x453
+zombiezen.com/go/capnproto2.PointerList.PtrAt(0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...)
+	/home/roos/go/src/zombiezen.com/go/capnproto2/list.go:348 +0xa2
+zombiezen.com/go/capnproto2.(*Message).RootPtr(0xc0000dc090, 0x0, 0x0, 0x0, 0x0, 0x0, 0x40bd19, 0xc00000e0a0)
+	/home/roos/go/src/zombiezen.com/go/capnproto2/mem.go:132 +0x180
+github.com/Oncilla/go-capnproto2-fuzz.parse(0xc00000e0a0, 0x7ff35d523000, 0x1, 0x200000, 0x9, 0x4453c8)
+	/home/roos/go/src/github.com/Oncilla/go-capnproto2-fuzz/list.go:41 +0x1e9
+github.com/Oncilla/go-capnproto2-fuzz.Parse(0x7ff35d523000, 0x1, 0x200000, 0x5cbc4ff6, 0x15c14c2c, 0x4a231a7ec8cc)
+	/home/roos/go/src/github.com/Oncilla/go-capnproto2-fuzz/list.go:30 +0x7a
+github.com/Oncilla/go-capnproto2-fuzz.Fuzz(0x7ff35d523000, 0x1, 0x200000, 0x3)
+	/home/roos/go/src/github.com/Oncilla/go-capnproto2-fuzz/list.go:14 +0x5b
+go-fuzz-dep.Main(0xc0000c9f80, 0x1, 0x1)
+	/tmp/go-fuzz-build423503150/goroot/src/go-fuzz-dep/main.go:36 +0x1b6
+main.main()
+	/tmp/go-fuzz-build423503150/gopath/src/github.com/Oncilla/go-capnproto2-fuzz/go.fuzz.main/main.go:15 +0x52
+exit status 2
