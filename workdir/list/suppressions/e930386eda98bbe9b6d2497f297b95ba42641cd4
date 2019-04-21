@@ -1,0 +1,11 @@
+panic: reflect.MakeSlice: negative len
+reflect.MakeSlice
+zombiezen.com/go/capnproto2/pogs.(*extracter).extractList
+zombiezen.com/go/capnproto2/pogs.(*extracter).extractField
+zombiezen.com/go/capnproto2/pogs.(*extracter).extractStruct
+zombiezen.com/go/capnproto2/pogs.Extract
+github.com/Oncilla/go-capnproto2-fuzz.parse
+github.com/Oncilla/go-capnproto2-fuzz.Parse
+github.com/Oncilla/go-capnproto2-fuzz.Fuzz
+go-fuzz-dep.Main
+main.main

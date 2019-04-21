@@ -6,10 +6,9 @@ When creating a `capnp.List` from a `capnp.Ptr`, the `uint32` value `Ptr.lenOrCa
 possibly resulting in a negative value. During the validity check, the non-negativity of the list length is not considered, resulting in a panic in the pogs library 
 [extract.go:L261](https://github.com/capnproto/go-capnproto2/blob/e1ae1f982d9908a41db464f02861a850a0880a5a/pogs/extract.go#L261)
 
-Running the panicing tests on your machine:
+Running the panicking tests on your machine:
 ````
-make build-proto
-go test -run Panic
+make test
 ````
 
 To run the fuzzer locally:
